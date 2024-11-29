@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+#define MAX_ARRAY_SIZE 10000
+
+void twoSum(int nums[], int nums_size, int target);
+
+int main() {
+	int target;
+	int nums[MAX_ARRAY_SIZE] = {0};
+	int array_size = 0;
+
+	scanf("%d", &target);
+
+	while (scanf("%d", &nums[array_size++]) == 1);
+	array_size--;
+
+	twoSum(nums, array_size, target);
+
+	return (0);
+}
+
+void twoSum(int nums[], int nums_size, int target) {
+	/* YOUR CODE HERE */
+    int first_num;
+    int second_num;
+    bool flag = false;
+
+    for(int i=0; i<nums_size; i++){
+        for(int j=(i+1); j<nums_size; j++){
+            if((nums[i]+nums[j])==target){
+                first_num=i;
+                second_num=j;
+                flag = true;
+                break;
+            }
+        }
+        if(flag) break;
+    }
+
+    printf("%s%d%s%d%s\n","(",first_num,", ",second_num,")"); 
+}
