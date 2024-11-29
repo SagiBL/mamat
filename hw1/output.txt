@@ -1,0 +1,167 @@
+6 Metulla
+4 Lehman
+4 Gesher HaZiv
+4 Achziv Miluot Industrial Zone
+3 Yir'on
+3 Shlomi
+3 Nahariya
+3 Betzet
+2 Zarit
+2 Yad Hana
+2 Tnuvot
+2 Tamra Industiral Park
+2 Tamra
+2 Shomera
+2 Shfaram
+2 Sa'ar
+2 Rosh HaNikra
+2 Qalansawe
+2 Ortal
+2 Olesh
+2 Misgav Am
+2 Kiryat Atta
+2 Ibillin
+2 Gan Yoshia
+2 Ein Zivan
+2 Betzet Beach
+2 Be'erotaim
+2 Bat Hefer
+2 Bahan
+2 Avivim
+1 Zivon
+1 Zemer
+1 Yasur
+1 Yanuv
+1 Yafhiv
+1 Ya'ara
+1 Ya'ad
+1 Usha
+1 Tayibe
+1 Talmei Elazar
+1 Southern Sharon Regional Council
+1 Shtula
+1 Shekhanya
+1 Shavei Zion
+1 Sha'ar Na'aman Industrial Zone
+1 Sha'arei Tikva
+1 Sha'ar Efraim
+1 Sdei Hemed
+1 Sdeh Itzhak
+1 Sassa
+1 Ruppin Academic Center
+1 Rosh HaAyin train station
+1 Rosh HaAyin
+1 Regba
+1 Ramat Yochana
+1 Rakefet
+1 Petach Tikva
+1 Oranit
+1 Odem
+1 Nitzanei Oz
+1 Nirit
+1 Neveh Ziv
+1 Neveh Yarak
+1 Neveh Yamin
+1 Netua
+1 Netiv HaShayara
+1 Ness Amim
+1 Nesher
+1 Moreshet
+1 Mitzpeh Aviv
+1 Mishmar HaSharon
+1 Misgav Regional Center
+1 Metzuba
+1 Merom Golan
+1 Mazra'a
+1 Matan
+1 Manof
+1 Manara
+1 Malkia
+1 Ma'abarot
+1 Lehavot Haviva
+1 Koranit
+1 Kiryat Yam
+1 Kiryat Shmona
+1 Kiryat Motzkin
+1 Kiryat Biyalik
+1 Kiryat Bialik Industrial Zone
+1 Kfar Yuval 
+1 Kfar Yona Industrial Zone
+1 Kfar Yona
+1 Kfar Yedidia
+1 Kfar Saba
+1 Kfar Monash
+1 Kfar Masaryk
+1 Kfar Manda
+1 Kfar Kassem
+1 Kfar HaRoeh
+1 Kfar Haim
+1 Kfar Giladi
+1 Kfar Biyalik
+1 Kfar Azza
+1 Kaukab Abu al-Hija
+1 Kafr Bara
+1 Kabul
+1 Jish (Gush Halav)
+1 Jaljulia
+1 Isfiya
+1 Iftach
+1 Horashim
+1 Hogla
+1 Hod HaSharon
+1 Hibat Zion
+1 Herev Le'Et
+1 Hatzav Industrial Zone
+1 HaOgen
+1 Haniel
+1 HaMa'apil
+1 Haifa - Kiryat Haim and Shmuel 
+1 Hagor
+1 Hadera - East
+1 Hadar Am
+1 Givat Wolfson
+1 Givat HaShlosha
+1 Givat Haim (Meuhad)
+1 Givat Haim (Ihud)
+1 Ginot Hadar
+1 Ghajar
+1 Geulim
+1 Geulei Teiman
+1 Evron
+1 Even Menachem
+1 Elyashiv
+1 Elyachin
+1 El Rom
+1 Elkana
+1 Elishema
+1 Ein HaMifratz
+1 Ein HaHoresh
+1 Einat
+1 Dovev
+1 Dmeide
+1 Dishon
+1 Damon Priosn
+1 Daliyat al-Karmel
+1 Cabri
+1 Burgata
+1 Buq'ata
+1 Bir al-Maksur
+1 Ben Ami
+1 Beit Yithak - Sha'ar Hefer
+1 Beit Oren
+1 Beit Hazon
+1 Beit HaLevi
+1 Baram
+1 Avnei Hefetz
+1 Avdon
+1 Atzmon (Segev)
+1 Amatz
+1 Alonei HaBashan
+1 Alfei Menashe
+1 Akko New Cemetery
+1 Ahituv
+1 Afek and Lev Ha\
+1 Afek
+1 Adi
+1 Adanim
+1 Acco - Industrial Zone
