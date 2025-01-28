@@ -34,7 +34,7 @@ bool stack_destroy(struct stack* stack) {
 
     // Call the destroy function for each element
     for (size_t i = 0; i < stack->size; i++) {
-        stack->destroy(stack->data + i);
+        stack->destroy(stack->data[i]);
     }
         
     free(stack->data);  // Free the array holding the elements
@@ -46,14 +46,12 @@ bool stack_destroy(struct stack* stack) {
 // Function to push an element onto the stack
 bool stack_push(struct stack* stack, void *new_elem) {
     if (!stack || !new_elem) return FAIL ;  //invalid arguments - empty
-    if(stack->size+1 > stack->max_size) return FAIL ;  //stack is full
+    if(stack->size >= stack->max_size) return FAIL ;  //stack is full
 
-    stack->data = (elem_t*)realloc(stack->data, ( (stack->size+1)*sizeof(elem_t) ) );
-    if (!stack->data) {
+    stack->data[stack->size] = stack->clone(new_elem);
+    if (!stack->data[stack->size]) {
         return FAIL;  // failed
     }
-    
-    stack->data[stack->size] = stack->clone(new_elem);  // Clone the new_elem
     stack->size++;
     return SUCCESS;
 }
@@ -61,7 +59,7 @@ bool stack_push(struct stack* stack, void *new_elem) {
 // Function to pop an element from the stack
 void stack_pop(struct stack* stack) {
     if (!stack || stack->size == 0) return;  //invalid arguments - empty
-    stack->destroy(stack->data + (stack->size-1));  // Destroy the element
+    stack->destroy(stack->data[stack->size - 1]);  // Destroy the element
     stack->size--;  // Decrease the size of the stack
     return;
 }
@@ -80,13 +78,15 @@ size_t stack_size(struct stack* stack) {
 
 // Function to check if the stack is empty
 bool stack_is_empty(struct stack* stack) {
-    if (!stack) return false;  //invalid arguments - empty
-    return stack->size == 0;
+    return !stack || stack->size == 0;
 }
 
 // Function to get the capacity of the stack
 size_t stack_capacity(struct stack* stack) {
     if (!stack) return 0;  //invalid arguments - empty
+    if (stack->max_size < stack->size){
+        return 0;         //invalid arguments - size bigger than max_size
+    }
     return stack->max_size - stack->size;
 }
 
