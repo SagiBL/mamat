@@ -1,28 +1,20 @@
 # Compiler and flags
 CC = gcc
-CFLAGS = -g -Wall -std=c99
+CFLAGS = -Wall -g -std=c99
+CLINK=$(CC)
 
-# Linker flags
-LDFLAGS = -o
+all: stack.exe student.exe
 
-# Target executable
-TARGET = program.exe
+student.exe: main.o student.o student.h
+	$(CLINK) main.o student.o -o student.exe
+student.o: student.c
 
-# Source files
-SRCS = main.c student.c stack.c
-OBJS = $(SRCS:.c=.o)
+stack.exe: main.o stack.o stack.h
+	$(CLINK) main.o stack.o -o stack.exe
+stack.o: stack.c
 
-# Default rule
-all: $(TARGET)
+main.o: main.c common.h student.h stack.h
 
-# Linking step
-$(TARGET): $(OBJS)
-	$(CC) $(OBJS) $(LDFLAGS) $(TARGET)
-
-# Compilation step
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Clean rule
 clean:
-	rm -rf *.o *.exe
+rm -f *.o *.exe
+
