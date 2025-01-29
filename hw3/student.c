@@ -4,20 +4,24 @@
 #include "student.h"
 
 
-struct student* student_clone(struct student* student){
+void* student_clone(void* student){
+    if (student == NULL) {   
+        return NULL;        //failed
+    }
+    struct student* temp = (struct student*)student;
     struct student* clone = (struct student*)malloc(sizeof(struct student));
     if (clone == NULL) {   
         return NULL;        //failed
     }
 
-    clone->age = student->age;
-    clone->id = student->id;
+    clone->age = temp->age;
+    clone->id = temp->id;
 
     // memory allocation for clone->name
-    if (student->name != NULL) {
-        clone->name = (char*)malloc(strlen(student->name) + 1);  
+    if (temp->name != NULL) {
+        clone->name = (char*)malloc(strlen(temp->name) + 1);  
         if (clone->name != NULL) {
-            strcpy(clone->name, student->name);  // Copy name
+            strcpy(clone->name, temp->name);  // Copy name
         } 
         else {
             free(clone);  // free the struct
@@ -32,15 +36,17 @@ struct student* student_clone(struct student* student){
 }
 
 
-void student_destroy(struct student* student){
-    if(student->name != NULL) {     // Free the dynamically allocated memory for name (if it was allocated)
-        free(student->name);
+void student_destroy(void* student){
+    struct student* temp = (struct student*)student;
+    if(temp->name != NULL) {     // Free the dynamically allocated memory for name (if it was allocated)
+        free(temp->name);
     }
-    free(student);                  // Free the memory for the struct itself
+    free(temp);                  // Free the memory for the struct itself
     return;
 }
 
-void student_print(struct student* student){
-    printf("student name: %s, age: %d, id: %d\n", student->name,student->age,student->id);
+void student_print(void* student){
+    struct student* temp = (struct student*)student;
+    printf("student name: %s, age: %d, id: %d\n", temp->name,temp->age,temp->id);
     return;
 }
