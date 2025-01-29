@@ -3,16 +3,12 @@ CC = gcc
 CFLAGS = -Wall -g -std=c99
 CLINK=$(CC)
 
-all: stack.exe student.exe
 
-student.exe: main.o student.o student.h
-	$(CLINK) main.o student.o -o student.exe
-student.o: student.c
+prog.exe: main.o student.o stack.o
+	$(CLINK) main.o student.o stack.o -o prog.exe
 
-stack.exe: main.o stack.o stack.h
-	$(CLINK) main.o stack.o -o stack.exe
-stack.o: stack.c
-
+student.o: student.c student.h
+stack.o: stack.c stack.h
 main.o: main.c common.h student.h stack.h
 
 clean:
