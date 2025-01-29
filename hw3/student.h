@@ -5,21 +5,19 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-// Generic function pointers
-typedef void* (*clone_t)(void*);
-typedef void (*destroy_t)(void*);
-typedef void (*print_t)(void*);
+typedef void *elem_t;
+typedef void* (*clone_t)(elem_t e);
+typedef void (*destroy_t)(elem_t e);
+typedef void (*print_t)(elem_t e);
 
-// Student struct
 struct student {
-    char *name;
-    int age;
-    int id;
+char *name;
+int age;
+int id;
 };
 
-// Function declarations matching function pointer types
-void* student_clone(void* student);  // Changed return type to void*
-void student_destroy(void* student);
-void student_print(void* student);
+struct student* student_clone(struct student* student);
+void student_destroy(struct student* student);
+void student_print(struct student* student);
 
 #endif
